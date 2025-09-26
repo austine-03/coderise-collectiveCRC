@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Coderise | Your Data Protection & Privacy Rights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .policy-section {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+        .policy-highlight {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border: 2px solid rgba(102, 126, 234, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .data-type {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .data-type.personal {
+            border-left: 4px solid #3b82f6;
+            background: #eff6ff;
+        }
+        .data-type.technical {
+            border-left: 4px solid #10b981;
+            background: #ecfdf5;
+        }
+        .data-type.usage {
+            border-left: 4px solid #f59e0b;
+            background: #fffbeb;
+        }
+        .rights-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #10b981;
+        }
+        .rights-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .contact-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        .toc-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #4b5563;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .toc-link:hover {
+            background: #f3f4f6;
+            border-left-color: #667eea;
+            color: #667eea;
+        }
+        .toc-link.active {
+            background: #eff6ff;
+            border-left-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid #a7f3d0;
+            margin: 0.25rem;
+        }
+        .update-banner {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid #f59e0b;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .legal-notice {
+            background: #f9fafb;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+   <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-gray-800">Code<span class="text-purple-600">rise</span></h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-600 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="service.html" class="text-gray-600 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="portfolio.html" class="text-gray-600 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Portfolio</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-purple-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-800 hover:text-purple-600 font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-purple-600 font-medium">About</a>
+                <a href="service.html" class="block px-3 py-2 text-gray-600 hover:text-purple-600 font-medium">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-gray-600 hover:text-purple-600 font-medium">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-purple-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+                    Privacy Policy 🔒
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-purple-100 fade-in">
+                    Your privacy matters to us. Learn how we protect and handle your personal information.
+                </p>
+                <div class="fade-in">
+                    <div class="inline-flex items-center bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg px-6 py-3 rounded-full border border-white border-opacity-30">
+                        <span class="text-green-300 mr-2">✅</span>
+                        <span class="text-white font-semibold">POPIA Compliant • GDPR Ready • Transparent Practices</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Last Updated Banner -->
+    <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="update-banner">
+                <div class="flex items-center justify-center">
+                    <span class="text-yellow-600 mr-2">📅</span>
+                    <span class="text-yellow-800 font-semibold">Last Updated: September 15, 2025</span>
+                    <span class="text-yellow-600 ml-2">• Effective Date: October 1, 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <!-- Table of Contents -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-lg shadow-lg p-6 sticky top-24">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4">Table of Contents</h3>
+                        <nav class="space-y-1">
+                            <a href="#overview" class="toc-link">1. Overview</a>
+                            <a href="#information-we-collect" class="toc-link">2. Information We Collect</a>
+                            <a href="#how-we-use" class="toc-link">3. How We Use Information</a>
+                            <a href="#information-sharing" class="toc-link">4. Information Sharing</a>
+                            <a href="#data-security" class="toc-link">5. Data Security</a>
+                            <a href="#your-rights" class="toc-link">6. Your Rights</a>
+                            <a href="#cookies" class="toc-link">7. Cookies & Tracking</a>
+                            <a href="#data-retention" class="toc-link">8. Data Retention</a>
+                            <a href="#international-transfers" class="toc-link">9. International Transfers</a>
+                            <a href="#children-privacy" class="toc-link">10. Children's Privacy</a>
+                            <a href="#changes" class="toc-link">11. Policy Changes</a>
+                            <a href="#contact" class="toc-link">12. Contact Us</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Policy Content -->
+                <div class="lg:col-span-3">
+                    <!-- Overview -->
+                    <div id="overview" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">1. Overview</h2>
+                        <p class="text-gray-700 mb-4">
+                            Welcome to Coderise Collective ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our career development services, including CV optimization, LinkedIn enhancement, web development, and personal branding.
+                        </p>
+                        
+                        <div class="policy-highlight">
+                            <h3 class="text-lg font-semibold text-purple-800 mb-3">🎯 Our Privacy Commitment</h3>
+                            <ul class="text-purple-700 space-y-2">
+                                <li>✅ <strong>Transparency:</strong> Clear information about data collection and use</li>
+                                <li>✅ <strong>Control:</strong> You decide what information to share</li>
+                                <li>✅ <strong>Security:</strong> Industry-standard protection measures</li>
+                                <li>✅ <strong>Compliance:</strong> POPIA, GDPR, and international standards</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-gray-700">
+                            By using our services, you agree to the collection and use of information in accordance with this policy. If you do not agree with our policies and practices, please do not use our services.
+                        </p>
+                    </div>
+
+                    <!-- Information We Collect -->
+                    <div id="information-we-collect" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">2. Information We Collect</h2>
+                        <p class="text-gray-700 mb-6">
+                            We collect information you provide directly to us, information we obtain automatically when you use our services, and information from third-party sources.
+                        </p>
+
+                        <div class="data-type personal">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-3">👤 Personal Information</h3>
+                            <p class="text-blue-700 mb-3">Information that identifies you personally:</p>
+                            <ul class="text-blue-600 space-y-1 text-sm">
+                                <li>• Full name and professional title</li>
+                                <li>• Email address and phone number</li>
+                                <li>• Physical address (if required for services)</li>
+                                <li>• Professional experience and education</li>
+                                <li>• Skills, certifications, and achievements</li>
+                                <li>• Career goals and preferences</li>
+                                <li>• LinkedIn profile and social media links</li>
+                                <li>• Professional photos and portfolio materials</li>
+                            </ul>
+                        </div>
+
+                        <div class="data-type technical">
+                            <h3 class="text-lg font-semibold text-green-800 mb-3">💻 Technical Information</h3>
+                            <p class="text-green-700 mb-3">Information collected automatically:</p>
+                            <ul class="text-green-600 space-y-1 text-sm">
+                                <li>• IP address and location data</li>
+                                <li>• Browser type and version</li>
+                                <li>• Device information and operating system</li>
+                                <li>• Website usage patterns and analytics</li>
+                                <li>• Cookies and similar tracking technologies</li>
+                                <li>• Referral sources and search terms</li>
+                            </ul>
+                        </div>
+
+                        <div class="data-type usage">
+                            <h3 class="text-lg font-semibold text-yellow-800 mb-3">📊 Usage Information</h3>
+                            <p class="text-yellow-700 mb-3">Information about how you use our services:</p>
+                            <ul class="text-yellow-600 space-y-1 text-sm">
+                                <li>• Services requested and purchased</li>
+                                <li>• Communication preferences</li>
+                                <li>• Feedback and survey responses</li>
+                                <li>• Support interactions and inquiries</li>
+                                <li>• Payment and billing information</li>
+                                <li>• Project files and collaboration data</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- How We Use Information -->
+                    <div id="how-we-use" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">3. How We Use Your Information</h2>
+                        <p class="text-gray-700 mb-6">
+                            We use the information we collect for various purposes related to providing and improving our career development services.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <h3 class="text-lg font-semibold text-blue-800 mb-3">🎯 Service Delivery</h3>
+                                <ul class="text-blue-700 space-y-2 text-sm">
+                                    <li>• Create and optimize your CV/resume</li>
+                                    <li>• Enhance your LinkedIn profile</li>
+                                    <li>• Develop your personal website</li>
+                                    <li>• Build your personal brand strategy</li>
+                                    <li>• Provide career coaching and advice</li>
+                                    <li>• Process payments and billing</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                <h3 class="text-lg font-semibold text-green-800 mb-3">📞 Communication</h3>
+                                <ul class="text-green-700 space-y-2 text-sm">
+                                    <li>• Respond to your inquiries</li>
+                                    <li>• Send service updates and notifications</li>
+                                    <li>• Provide customer support</li>
+                                    <li>• Share relevant career opportunities</li>
+                                    <li>• Send marketing communications (with consent)</li>
+                                    <li>• Conduct satisfaction surveys</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                                <h3 class="text-lg font-semibold text-purple-800 mb-3">🔧 Service Improvement</h3>
+                                <ul class="text-purple-700 space-y-2 text-sm">
+                                    <li>• Analyze usage patterns and trends</li>
+                                    <li>• Improve our service offerings</li>
+                                    <li>• Develop new features and tools</li>
+                                    <li>• Personalize your experience</li>
+                                    <li>• Conduct research and analytics</li>
+                                    <li>• Optimize website performance</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                                <h3 class="text-lg font-semibold text-yellow-800 mb-3">⚖️ Legal Compliance</h3>
+                                <ul class="text-yellow-700 space-y-2 text-sm">
+                                    <li>• Comply with legal obligations</li>
+                                    <li>• Protect our rights and interests</li>
+                                    <li>• Prevent fraud and abuse</li>
+                                    <li>• Enforce our terms of service</li>
+                                    <li>• Respond to legal requests</li>
+                                    <li>• Maintain business records</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Information Sharing -->
+                    <div id="information-sharing" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">4. Information Sharing and Disclosure</h2>
+                        <p class="text-gray-700 mb-6">
+                            We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.
+                        </p>
+
+                        <div class="policy-highlight">
+                            <h3 class="text-lg font-semibold text-red-800 mb-3">🚫 What We DON'T Do</h3>
+                            <ul class="text-red-700 space-y-2">
+                                <li>❌ <strong>Sell your data</strong> to advertisers or data brokers</li>
+                                <li>❌ <strong>Share personal information</strong> for marketing purposes</li>
+                                <li>❌ <strong>Disclose sensitive data</strong> without legal requirement</li>
+                                <li>❌ <strong>Use your information</strong> for unrelated purposes</li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">✅ When We May Share Information</h3>
+                        <div class="space-y-4">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">🤝 Service Providers</h4>
+                                <p class="text-gray-700 text-sm">Trusted third-party vendors who help us provide services (hosting, payment processing, analytics) under strict confidentiality agreements.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">⚖️ Legal Requirements</h4>
+                                <p class="text-gray-700 text-sm">When required by law, court order, or government request, or to protect our rights and safety.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">🏢 Business Transfers</h4>
+                                <p class="text-gray-700 text-sm">In connection with a merger, acquisition, or sale of assets, with appropriate notice and protection measures.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-gray-800 mb-2">✅ With Your Consent</h4>
+                                <p class="text-gray-700 text-sm">When you explicitly authorize us to share specific information for particular purposes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Security -->
+                    <div id="data-security" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">5. Data Security</h2>
+                        <p class="text-gray-700 mb-6">
+                            We implement comprehensive security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                                <h3 class="text-lg font-semibold text-green-800 mb-4">🔒 Technical Safeguards</h3>
+                                <div class="space-y-2">
+                                    <div class="security-badge">🔐 SSL/TLS Encryption</div>
+                                    <div class="security-badge">🛡️ Firewall Protection</div>
+                                    <div class="security-badge">🔑 Access Controls</div>
+                                    <div class="security-badge">💾 Secure Data Storage</div>
+                                    <div class="security-badge">🔄 Regular Backups</div>
+                                    <div class="security-badge">🔍 Intrusion Detection</div>
+                                </div>
+                            </div>
+
+                            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                                <h3 class="text-lg font-semibold text-blue-800 mb-4">👥 Administrative Safeguards</h3>
+                                <div class="space-y-2">
+                                    <div class="security-badge">📋 Privacy Training</div>
+                                    <div class="security-badge">🔐 Background Checks</div>
+                                    <div class="security-badge">📝 Confidentiality Agreements</div>
+                                    <div class="security-badge">🎯 Need-to-Know Access</div>
+                                    <div class="security-badge">📊 Regular Audits</div>
+                                    <div class="security-badge">🚨 Incident Response</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="policy-highlight">
+                            <h3 class="text-lg font-semibold text-purple-800 mb-3">🛡️ Your Security Responsibilities</h3>
+                            <ul class="text-purple-700 space-y-2">
+                                <li>🔑 <strong>Strong Passwords:</strong> Use unique, complex passwords for your accounts</li>
+                                <li>🔒 <strong>Secure Devices:</strong> Keep your devices and software updated</li>
+                                <li>📧 <strong>Email Security:</strong> Be cautious with email links and attachments</li>
+                                <li>🚨 <strong>Report Issues:</strong> Contact us immediately if you suspect a security breach</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Your Rights -->
+                    <div id="your-rights" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">6. Your Privacy Rights</h2>
+                        <p class="text-gray-700 mb-6">
+                            You have important rights regarding your personal information. We respect these rights and provide easy ways to exercise them.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="rights-card">
+                                <div class="text-2xl mb-3">👁️</div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Right to Access</h3>
+                                <p class="text-gray-600 text-sm mb-3">Request a copy of all personal information we hold about you, including how it's used and shared.</p>
+                                
+                            </div>
+
+                            <div class="rights-card">
+                                <div class="text-2xl mb-3">✏️</div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Right to Rectification</h3>
+                                <p class="text-gray-600 text-sm mb-3">Correct any inaccurate or incomplete personal information we have about you.</p>
+                               
+                            </div>
+
+                            <div class="rights-card">
+                                <div class="text-2xl mb-3">🗑️</div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Right to Erasure</h3>
+                                <p class="text-gray-600 text-sm mb-3">Request deletion of your personal information when it's no longer necessary for our services.</p>
+                                
+                            </div>
+
+                            <div class="rights-card">
+                                <div class="text-2xl mb-3">⏸️</div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Right to Restrict Processing</h3>
+                                <p class="text-gray-600 text-sm mb-3">Limit how we use your personal information in certain circumstances.</p>
+                                
+                            </div>
+
+                            <div class="rights-card">
+                                <div class="text-2xl mb-3">📦</div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Right to Data Portability</h3>
+                                <p class="text-gray-600 text-sm mb-3">Receive your personal information in a structured, machine-readable format.</p>
+                                
+                            </div>
+
+                            <div class="rights-card">
+                                <div class="text-2xl mb-3">🚫</div>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-3">Right to Object</h3>
+                                <p class="text-gray-600 text-sm mb-3">Object to processing of your personal information for marketing or other purposes.</p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-3">📞 How to Exercise Your Rights</h3>
+                            <p class="text-blue-700 mb-3">To exercise any of these rights, contact us using the information below:</p>
+                            <ul class="text-blue-600 space-y-1 text-sm">
+                                <li>📧 Email: coderise.crc@gmail.com</li>
+                                <li>📞 Phone: +27 71 756 5048</li>
+                                <li>📝 Online form: Available on our contact page</li>
+                                <li>⏱️ Response time: Within 30 days of your request</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Cookies -->
+                    <div id="cookies" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">7. Cookies and Tracking Technologies</h2>
+                        <p class="text-gray-700 mb-6">
+                            We use cookies and similar technologies to enhance your experience, analyze usage, and provide personalized content.
+                        </p>
+
+                        <div class="grid md:grid-cols-3 gap-6 mb-6">
+                            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                <h3 class="text-lg font-semibold text-green-800 mb-3">✅ Essential Cookies</h3>
+                                <p class="text-green-700 text-sm mb-3">Required for basic website functionality:</p>
+                                <ul class="text-green-600 text-xs space-y-1">
+                                    <li>• Session management</li>
+                                    <li>• Security features</li>
+                                    <li>• Form submissions</li>
+                                    <li>• User preferences</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <h3 class="text-lg font-semibold text-blue-800 mb-3">📊 Analytics Cookies</h3>
+                                <p class="text-blue-700 text-sm mb-3">Help us understand website usage:</p>
+                                <ul class="text-blue-600 text-xs space-y-1">
+                                    <li>• Page views and traffic</li>
+                                    <li>• User behavior patterns</li>
+                                    <li>• Performance metrics</li>
+                                    <li>• Error tracking</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                                <h3 class="text-lg font-semibold text-purple-800 mb-3">🎯 Marketing Cookies</h3>
+                                <p class="text-purple-700 text-sm mb-3">Used for personalized marketing:</p>
+                                <ul class="text-purple-600 text-xs space-y-1">
+                                    <li>• Targeted advertisements</li>
+                                    <li>• Social media integration</li>
+                                    <li>• Campaign tracking</li>
+                                    <li>• Retargeting</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="policy-highlight">
+                            <h3 class="text-lg font-semibold text-purple-800 mb-3">🔧 Cookie Management</h3>
+                            <p class="text-purple-700 mb-3">You can control cookies through:</p>
+                            <ul class="text-purple-600 space-y-2">
+                                <li>🌐 <strong>Browser Settings:</strong> Most browsers allow you to block or delete cookies</li>
+                                <li>⚙️ <strong>Cookie Preferences:</strong> Use our cookie consent tool to manage preferences</li>
+                                <li>🚫 <strong>Opt-Out Tools:</strong> Industry opt-out tools for advertising cookies</li>
+                                <li>📱 <strong>Mobile Settings:</strong> Device-level advertising controls</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Data Retention -->
+                    <div id="data-retention" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">8. Data Retention</h2>
+                        <p class="text-gray-700 mb-6">
+                            We retain your personal information only as long as necessary to provide our services and comply with legal obligations.
+                        </p>
+
+                        <div class="space-y-4">
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <h3 class="text-lg font-semibold text-blue-800 mb-3">📋 Active Service Period</h3>
+                                <p class="text-blue-700 text-sm">While you're actively using our services, we retain all necessary information to provide and improve our services.</p>
+                            </div>
+
+                            <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                                <h3 class="text-lg font-semibold text-yellow-800 mb-3">⏰ After Service Completion</h3>
+                                <ul class="text-yellow-700 text-sm space-y-1">
+                                    <li>• <strong>Project files:</strong> 2 years (for potential updates or references)</li>
+                                    <li>• <strong>Communication records:</strong> 3 years (for support and legal purposes)</li>
+                                    <li>• <strong>Payment information:</strong> 7 years (for tax and accounting requirements)</li>
+                                    <li>• <strong>Marketing data:</strong> Until you unsubscribe or object</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                                <h3 class="text-lg font-semibold text-red-800 mb-3">🗑️ Data Deletion</h3>
+                                <p class="text-red-700 text-sm mb-2">We securely delete or anonymize data when:</p>
+                                <ul class="text-red-600 text-sm space-y-1">
+                                    <li>• Retention period expires</li>
+                                    <li>• You request deletion (where legally permissible)</li>
+                                    <li>• Data is no longer needed for original purpose</li>
+                                    <li>• Legal obligations require deletion</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- International Transfers -->
+                    <div id="international-transfers" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">9. International Data Transfers</h2>
+                        <p class="text-gray-700 mb-6">
+                            As a South African company, we primarily process data within South Africa. However, some of our service providers may be located in other countries.
+                        </p>
+
+                        <div class="policy-highlight">
+                            <h3 class="text-lg font-semibold text-purple-800 mb-3">🌍 Transfer Safeguards</h3>
+                            <p class="text-purple-700 mb-3">When we transfer data internationally, we ensure adequate protection through:</p>
+                            <ul class="text-purple-600 space-y-2">
+                                <li>✅ <strong>Adequacy Decisions:</strong> Transfers to countries with adequate data protection</li>
+                                <li>✅ <strong>Standard Contractual Clauses:</strong> EU-approved contract terms</li>
+                                <li>✅ <strong>Binding Corporate Rules:</strong> Internal data protection standards</li>
+                                <li>✅ <strong>Certification Schemes:</strong> Industry-recognized privacy certifications</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-3">🏢 Our Service Providers</h3>
+                            <p class="text-gray-700 text-sm mb-3">We work with carefully selected international service providers for:</p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="text-gray-600 text-sm space-y-1">
+                                    <li>• Cloud hosting and storage</li>
+                                    <li>• Email and communication services</li>
+                                    <li>• Payment processing</li>
+                                </ul>
+                                <ul class="text-gray-600 text-sm space-y-1">
+                                    <li>• Analytics and monitoring</li>
+                                    <li>• Customer support tools</li>
+                                    <li>• Marketing platforms</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Children's Privacy -->
+                    <div id="children-privacy" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">10. Children's Privacy</h2>
+                        <p class="text-gray-700 mb-6">
+                            Our services are designed for adults seeking career development. We do not knowingly collect personal information from children under 18 years of age.
+                        </p>
+
+                        <div class="policy-highlight">
+                            <h3 class="text-lg font-semibold text-red-800 mb-3">🚫 Age Restrictions</h3>
+                            <ul class="text-red-700 space-y-2">
+                                <li>❌ <strong>No Services for Minors:</strong> Our services are not intended for individuals under 18</li>
+                                <li>❌ <strong>No Knowingly Collecting:</strong> We don't intentionally gather information from children</li>
+                                <li>✅ <strong>Immediate Deletion:</strong> Any child data discovered is promptly deleted</li>
+                                <li>📞 <strong>Parent Notification:</strong> We encourage parents to contact us with concerns</li>
+                            </ul>
+                        </div>
+
+                        <p class="text-gray-700">
+                            If you believe we have inadvertently collected information from a child under 18, please contact us immediately at coderise.crc@gmail.com, and we will take steps to delete such information.
+                        </p>
+                    </div>
+
+                    <!-- Policy Changes -->
+                    <div id="changes" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">11. Changes to This Privacy Policy</h2>
+                        <p class="text-gray-700 mb-6">
+                            We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors.
+                        </p>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <h3 class="text-lg font-semibold text-blue-800 mb-3">📢 How We Notify You</h3>
+                                <ul class="text-blue-700 text-sm space-y-2">
+                                    <li>📧 <strong>Email Notification:</strong> For significant changes</li>
+                                    <li>🌐 <strong>Website Banner:</strong> Prominent notice on our site</li>
+                                    <li>📱 <strong>In-App Notification:</strong> If you use our services</li>
+                                    <li>📅 <strong>30-Day Notice:</strong> Advance warning for major changes</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                                <h3 class="text-lg font-semibold text-green-800 mb-3">✅ Your Options</h3>
+                                <ul class="text-green-700 text-sm space-y-2">
+                                    <li>👁️ <strong>Review Changes:</strong> Compare old and new versions</li>
+                                    <li>❓ <strong>Ask Questions:</strong> Contact us for clarification</li>
+                                    <li>🚫 <strong>Object to Changes:</strong> Exercise your rights if needed</li>
+                                    <li>🔚 <strong>Discontinue Service:</strong> If you disagree with changes</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                            <p class="text-yellow-800 text-sm">
+                                <strong>📅 Version History:</strong> We maintain a record of all policy versions and changes. 
+                                The current version is always available at coderise.co.za/privacy-policy with the effective date clearly displayed.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div id="contact" class="policy-section fade-in">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">12. Contact Us</h2>
+                        <p class="text-gray-700 mb-6">
+                            If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please don't hesitate to contact us.
+                        </p>
+
+                        <div class="contact-card">
+                            <h3 class="text-2xl font-bold text-white mb-6">📞 Get in Touch</h3>
+                            <div class="grid md:grid-cols-2 gap-6 text-left">
+                                <div>
+                                    <h4 class="font-semibold text-purple-100 mb-3">General Inquiries</h4>
+                                    <div class="space-y-2 text-white">
+                                        <div>📧 coderise.crc@gmail.com</div>
+                                        <div>📞 +27 71 756 5048</div>
+                                        <div>💬 WhatsApp: +27 71 756 5048</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-purple-100 mb-3">Privacy Matters</h4>
+                                    <div class="space-y-2 text-white">
+                                        <div>🔒 coderise.crc@gmail.com</div>
+                                        <div>📋 Data Protection Officer</div>
+                                        <div>⏱️ Response within 48 hours</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 pt-6 border-t border-purple-400">
+                                <h4 class="font-semibold text-purple-100 mb-3">Business Address</h4>
+                                <div class="text-white">
+                                    <div>Coderise Collective (Pty) Ltd</div>
+                                    <div>We are currently based online</div>
+                                    <div>NO VALID OFFICEC FOR CODERISE COLLECTIVE AT THE MOMENT</div>
+                                    <div>South Africa</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="legal-notice">
+                            <p class="text-center">
+                                <strong>Legal Notice:</strong> This Privacy Policy is governed by South African law and complies with the Protection of Personal Information Act (POPIA). 
+                                For international users, we also adhere to GDPR principles where applicable. 
+                                Last updated: September 15, 2025 | Effective: October 1, 2025
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Code<span class="text-purple-400">rise</span></h3>
+                    <p class="text-gray-400">We Build. We Connect. We Rise Together.</p>
+                     <div class="text-sm text-gray-400">
+                        <div>📞 +27 71 756 5048</div>
+                        <div>📧 coderise.crc@gmail.com</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="service.html" class="hover:text-white transition-colors">CV Creation</a></li>
+                        <li><a href="service.html" class="hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="service.html" class="hover:text-white transition-colors">Branding</a></li>
+                        <li><a href="service.html" class="hover:text-white transition-colors">Career Coaching</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+                <div>
+<div>
+    <h4 class="font-semibold mb-4">Connect</h4>
+    <div class="flex space-x-4">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/19TBRAw49L/?mibextid=wwXIfr" 
+   target="_blank" class="text-gray-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 
+                         23.407.593 24 1.325 24h11.495v-9.294H9.691V11.01h3.129V8.413
+                         c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 
+                         2.795.143v3.24h-1.918c-1.505 0-1.797.716-1.797 
+                         1.766v2.316h3.587l-.467 3.696h-3.12V24h6.116C23.407 
+                         24 24 23.407 24 22.674V1.326C24 .593 23.407 
+                         0 22.675 0z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/your-linkedin-username" 
+   target="_blank" class="text-gray-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037
+                         -1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046
+                         c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 
+                         4.267 5.455v6.286zM5.337 7.433c-1.144 
+                         0-2.063-.926-2.063-2.065 0-1.138.92-2.063 
+                         2.063-2.063 1.14 0 2.064.925 2.064 
+                         2.063 0 1.139-.925 2.065-2.064 2.065zM6.119 
+                         20.452H3.555V9h3.564v11.452zM22.225 
+                         0H1.771C.792 0 0 .774 0 1.729v20.542C0 
+                         23.227.792 24 1.771 24h20.451C23.2 24 24 
+                         23.227 24 22.271V1.729C24 .774 23.2 
+                         0 22.222 0h.003z"/>
+            </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/coderisecrc25?igsh=MTByODU5YzhteGxjYQ%3D%3D&utm_source=qr" 
+   target="_blank" class="text-gray-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 
+                         7.75v8.5A5.75 5.75 0 0 1 16.25 
+                         22h-8.5A5.75 5.75 0 0 1 2 
+                         16.25v-8.5A5.75 5.75 0 0 1 
+                         7.75 2zm0 1.5A4.25 4.25 0 0 
+                         0 3.5 7.75v8.5A4.25 4.25 0 0 
+                         0 7.75 20.5h8.5a4.25 4.25 0 
+                         0 0 4.25-4.25v-8.5A4.25 4.25 
+                         0 0 0 16.25 3.5h-8.5zM12 
+                         7a5 5 0 1 1 0 10 5 5 0 0 
+                         1 0-10zm0 1.5a3.5 3.5 0 1 
+                         0 0 7 3.5 3.5 0 0 0 
+                         0-7zm5.25-.88a1.13 1.13 
+                         0 1 1-2.25 0 1.13 1.13 
+                         0 0 1 2.25 0z"/>
+            </svg>
+        </a>
+
+        >
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Coderise. All rights reserved. Built with passion by the Coderise team.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Table of Contents active link tracking
+        const sections = document.querySelectorAll('.policy-section');
+        const tocLinks = document.querySelectorAll('.toc-link');
+
+        function updateActiveLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveLink);
+        updateActiveLink();
+
+        // Smooth scrolling for TOC links
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Rights buttons functionality
+        document.querySelectorAll('.rights-card button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const rightType = this.textContent.trim();
+                alert(`Privacy Right Request: ${rightType}\n\nWe'll redirect you to our secure privacy request form where you can submit your request. Our privacy team will respond within 30 days as required by law.`);
+            });
+        });
+
+        // Contact buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const buttonText = this.textContent.trim();
+                
+                if (buttonText.includes('Get Started')) {
+                    e.preventDefault();
+                    alert('Starting your privacy-protected career transformation... We handle your data with the utmost care and transparency!');
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+       
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9840898ce400e748',t:'MTc1ODY5ODYxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

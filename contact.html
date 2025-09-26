@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Coderise | Get Your Career Transformation Started</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .chat-bubble {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .contact-method {
+            transition: all 0.3s ease;
+        }
+        .contact-method:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+        .team-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .online-indicator {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            width: 12px;
+            height: 12px;
+            background: #10b981;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+     <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-gray-800">Code<span class="text-purple-600">rise</span></h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-800 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="about.html" class="text-gray-600 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="service.html" class="text-gray-600 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                        <a href="portfolio.html" class="text-gray-600 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Portfolio</a>
+                        <a href="contact.html" class="text-gray-600 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-purple-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-800 hover:text-purple-600 font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-purple-600 font-medium">About</a>
+                <a href="service.html" class="block px-3 py-2 text-gray-600 hover:text-purple-600 font-medium">Services</a>
+                <a href="portfolio.html" class="block px-3 py-2 text-gray-600 hover:text-purple-600 font-medium">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-purple-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="gradient-bg pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+                    Let's Transform Your Career Together 🚀
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-purple-100 fade-in">
+                    Ready to unlock your potential? We're here to guide you every step of the way.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+    <a href="tel:+27717565048" 
+       class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors text-center">
+        📞 Call Us Now
+    </a>
+    <a href="https://wa.me/27717565048" target="_blank" 
+       class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors text-center">
+        💬 Start Live Chat
+    </a>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Multiple Ways to Connect</h2>
+                <p class="text-xl text-gray-600">Choose the method that works best for you</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Phone -->
+                <div class="contact-method bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl text-center border border-blue-200">
+                    <div class="text-4xl mb-4">📞</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Call Us</h3>
+                    <p class="text-gray-600 mb-4">Speak directly with our career specialists</p>
+                    <div class="font-bold text-blue-600 text-lg mb-2">+27 71 756 5048</div>
+                    <div class="text-sm text-gray-600 mb-4">Available: 24/7</div>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="contact-method bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl text-center border border-green-200">
+                    <div class="text-4xl mb-4">💬</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">WhatsApp</h3>
+                    <p class="text-gray-600 mb-4">Quick questions and instant responses</p>
+                    <div class="font-bold text-green-600 text-lg mb-2">+27 71 756 5048</div>
+                    <div class="text-sm text-gray-600 mb-4">Available 24/7</div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-method bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl text-center border border-purple-200">
+                    <div class="text-4xl mb-4">📧</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Email</h3>
+                    <p class="text-gray-600 mb-4">Detailed inquiries and consultations</p>
+                    <div class="font-bold text-purple-600 text-lg mb-2">coderise.crc@gmail.com</div>
+                    <div class="text-sm text-gray-600 mb-4">Response within 2 hours</div>
+                </div>
+
+                <!-- Video Call -->
+                <div class="contact-method bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl text-center border border-yellow-200">
+                    <div class="text-4xl mb-4">🎥</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Reference Call</h3>
+                    <p class="text-gray-600 mb-4">Speak directly with our career specialists</p>
+                    <div class="font-bold text-yellow-600 text-lg mb-2">+27 79 641 2723</div>
+                    <div class="text-sm text-gray-600 mb-4">Available 24/7</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Send Us a Message</h2>
+                <p class="text-xl text-gray-600">Tell us about your career goals and we'll get back to you within 2 hours</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <form id="booking-form" 
+                      action="https://formsubmit.co/coderise.crc@gmail.com" 
+                      method="POST" 
+                      class="space-y-6">
+
+                    <!-- Hidden Inputs -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                    <input type="text" name="_honey" style="display:none">
+
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                        <input type="text" id="name" name="name" required 
+                               class="form-input w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" 
+                               placeholder="e.g. John Doe">
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="form-input w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" 
+                                   placeholder="e.g. johndoe@gmail.com">
+                        </div>
+                        <div>
+                            <label for="number" class="block text-sm font-medium text-gray-700 mb-2">Contact Number *</label>
+                            <input type="tel" id="number" name="number" required 
+                                   pattern="^0[6-8][0-9]{8}$" 
+                                   class="form-input w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" 
+                                   placeholder="e.g. 0712345678"
+                                   title="Enter a valid South African number e.g. 0712345678">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Service Interest *</label>
+                        <select name="service" required class="form-input w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <option value="">Select a service...</option>
+                            <option value="CV Optimization">CV Optimization</option>
+                            <option value="LinkedIn Profile Enhancement">LinkedIn Profile Enhancement</option>
+                            <option value="Interview Coaching">Interview Coaching</option>
+                            <option value="Career Strategy Consultation">Career Strategy Consultation</option>
+                            <option value="Salary Negotiation">Salary Negotiation</option>
+                            <option value="Complete Career Transformation">Complete Career Transformation</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Current Career Level</label>
+                        <select name="career_level" class="form-input w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                            <option value="">Select your level...</option>
+                            <option value="Entry Level (0-2 years)">Entry Level (0-2 years)</option>
+                            <option value="Mid Level (3-7 years)">Mid Level (3-7 years)</option>
+                            <option value="Senior Level (8-15 years)">Senior Level (8-15 years)</option>
+                            <option value="Executive (15+ years)">Executive (15+ years)</option>
+                            <option value="Career Change">Career Change</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Tell Us About Your Goals *</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  class="form-input w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" 
+                                  placeholder="Describe your career goals, challenges, and what you'd like to achieve..."></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Method</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <label class="flex items-center">
+                                <input type="radio" name="contact_method" value="Email" class="mr-2">
+                                <span class="text-sm">Email</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="contact_method" value="Phone" class="mr-2">
+                                <span class="text-sm">Phone</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="contact_method" value="WhatsApp" class="mr-2">
+                                <span class="text-sm">WhatsApp</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="contact_method" value="Video Call" class="mr-2">
+                                <span class="text-sm">Video Call</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input type="checkbox" name="terms_agreed" value="yes" required class="mr-3">
+                        <span class="text-sm text-gray-600">I agree to the <a href="terms.html" class="text-purple-600 hover:underline">Terms of Service</a> and <a href="policy.html" class="text-purple-600 hover:underline">Privacy Policy</a></span>
+                    </div>
+
+                    <button type="submit" id="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all transform hover:scale-105">
+                        Send Message & Get Free Consultation 🚀
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Meet Our Team</h2>
+                <p class="text-xl text-gray-600">Career specialists ready to help you succeed</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-gradient-to-br from-purple-500 to-blue-600 p-8 rounded-2xl text-white text-center">
+                    <div class="relative inline-block mb-4">
+                        <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-3xl font-bold">
+                            NH
+                        </div>
+                        <div class="online-indicator pulse-dot"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Nkanyiso Hlatshwayo</h3>
+                    <p class="text-purple-100 mb-3">Senior Career Strategist</p>
+                    <p class="text-sm text-purple-100 mb-4">Specializes in tech career transitions and FAANG company placements</p>
+                    <div class="flex items-center justify-center space-x-2 text-sm">
+                        <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                        <span>Available Now</span>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-gradient-to-br from-green-500 to-teal-600 p-8 rounded-2xl text-white text-center">
+                    <div class="relative inline-block mb-4">
+                        <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-3xl font-bold">
+                            SM
+                        </div>
+                        <div class="online-indicator pulse-dot"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Sarah Mitchell</h3>
+                    <p class="text-green-100 mb-3">Interview Coach</p>
+                    <p class="text-sm text-green-100 mb-4">Expert in behavioral and technical interview preparation</p>
+                    <div class="flex items-center justify-center space-x-2 text-sm">
+                        <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                        <span>Available Now</span>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-gradient-to-br from-yellow-500 to-orange-600 p-8 rounded-2xl text-white text-center">
+                    <div class="relative inline-block mb-4">
+                        <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-3xl font-bold">
+                            DM
+                        </div>
+                        <div class="online-indicator pulse-dot"></div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">David Moloi</h3>
+                    <p class="text-yellow-100 mb-3">LinkedIn Specialist</p>
+                    <p class="text-sm text-yellow-100 mb-4">Personal branding and professional networking expert</p>
+                    <div class="flex items-center justify-center space-x-2 text-sm">
+                        <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                        <span>Available Now</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Quick answers to common questions</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-lg shadow-md">
+                    <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">How quickly can I expect results?</h3>
+                            <span class="text-2xl text-gray-400">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 pb-6">
+                        <p class="text-gray-600">Most clients see significant improvements within 2-4 weeks. CV optimization typically takes 3-5 business days, while comprehensive career transformations can take 4-8 weeks depending on your goals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md">
+                    <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">What's included in the free consultation?</h3>
+                            <span class="text-2xl text-gray-400">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 pb-6">
+                        <p class="text-gray-600">Your free 30-minute consultation includes a career assessment, goal setting session, personalized strategy overview, and a custom action plan. No obligations, just valuable insights.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md">
+                    <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">Do you work with all industries?</h3>
+                            <span class="text-2xl text-gray-400">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 pb-6">
+                        <p class="text-gray-600">Yes! While we specialize in tech, finance, and consulting, our proven methodologies work across all industries. We tailor our approach to your specific field and career goals.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md">
+                    <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">What if I'm not satisfied with the results?</h3>
+                            <span class="text-2xl text-gray-400">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 pb-6">
+                        <p class="text-gray-600">We offer a 100% satisfaction guarantee. If you're not completely happy with our work, we'll revise it until you are, or provide a full refund within 30 days.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md">
+                    <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">Can you help with international job applications?</h3>
+                            <span class="text-2xl text-gray-400">+</span>
+                        </div>
+                    </button>
+                    <div class="faq-content px-6 pb-6">
+                        <p class="text-gray-600">Absolutely! We have extensive experience with international applications, including US, UK, EU, and other global markets. We understand regional differences and requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Location -->
+    <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Visit Our Office</h2>
+            <p class="text-xl text-gray-600">We are fully digital — connecting with you anywhere in the world</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Office Information -->
+            <div>
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-2xl border border-purple-200 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Coderise Headquarters</h3>
+                    <p class="text-gray-600 text-lg">
+                        🚀 We currently don’t have physical offices.<br>
+                        All our services are provided remotely and online.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Photo Animation Section -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-500">
+                    <img src="b1.JPEG" alt="Office Work" class="w-full h-full object-cover">
+                </div>
+                
+                <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-500">
+                    <img src="b2.JPEG" alt="Remote Work" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Social Media & Final CTA -->
+    <section class="py-16 gradient-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Stay Connected</h2>
+            <p class="text-xl text-purple-100 mb-8">Follow us for career tips, success stories, and industry insights</p>
+            
+            <div class="flex justify-center space-x-6 mb-12">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/19TBRAw49L/?mibextid=wwXIfr" 
+   target="_blank" class="w-12 h-12 rounded-full flex items-center justify-center text-white text-xl 
+                     bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-80 transition">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 
+                     23.407.593 24 1.325 24h11.495v-9.294H9.691V11.01h3.129V8.413
+                     c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 
+                     2.795.143v3.24h-1.918c-1.505 0-1.797.716-1.797 
+                     1.766v2.316h3.587l-.467 3.696h-3.12V24h6.116C23.407 
+                     24 24 23.407 24 22.674V1.326C24 .593 23.407 
+                     0 22.675 0z"/>
+        </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/your-linkedin-username" 
+   target="_blank" class="w-12 h-12 rounded-full flex items-center justify-center text-white text-xl 
+                     bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-80 transition">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037
+                     -1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046
+                     c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 
+                     4.267 5.455v6.286zM5.337 7.433c-1.144 
+                     0-2.063-.926-2.063-2.065 0-1.138.92-2.063 
+                     2.063-2.063 1.14 0 2.064.925 2.064 
+                     2.063 0 1.139-.925 2.065-2.064 2.065zM6.119 
+                     20.452H3.555V9h3.564v11.452zM22.225 
+                     0H1.771C.792 0 0 .774 0 1.729v20.542C0 
+                     23.227.792 24 1.771 24h20.451C23.2 24 24 
+                     23.227 24 22.271V1.729C24 .774 23.2 
+                     0 22.222 0h.003z"/>
+        </svg>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/coderisecrc25?igsh=MTByODU5YzhteGxjYQ%3D%3D&utm_source=qr" 
+   target="_blank" class="w-12 h-12 rounded-full flex items-center justify-center text-white text-xl 
+                     bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-80 transition">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 
+                     7.75v8.5A5.75 5.75 0 0 1 16.25 
+                     22h-8.5A5.75 5.75 0 0 1 2 
+                     16.25v-8.5A5.75 5.75 0 0 1 
+                     7.75 2zm0 1.5A4.25 4.25 0 0 
+                     0 3.5 7.75v8.5A4.25 4.25 0 0 
+                     0 7.75 20.5h8.5a4.25 4.25 0 
+                     0 0 4.25-4.25v-8.5A4.25 4.25 
+                     0 0 0 16.25 3.5h-8.5zM12 
+                     7a5 5 0 1 1 0 10 5 5 0 0 
+                     1 0-10zm0 1.5a3.5 3.5 0 1 
+                     0 0 7 3.5 3.5 0 0 0 
+                     0-7zm5.25-.88a1.13 1.13 
+                     0 1 1-2.25 0 1.13 1.13 
+                     0 0 1 2.25 0z"/>
+        </svg>
+    </a>
+
+    <!-- GitHub -->
+    <a href="#" class="w-12 h-12 rounded-full flex items-center justify-center text-white text-xl 
+                     bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-80 transition">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 
+                     5.373-12 12 0 5.303 3.438 
+                     9.8 8.205 11.385.6.113.82-.258.82-.577
+                     0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+                     -.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729
+                     1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 
+                     2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605
+                     -2.665-.3-5.466-1.334-5.466-5.931 
+                     0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176
+                     0 0 1.008-.322 3.301 1.23a11.5 
+                     11.5 0 0 1 6.003 0c2.292-1.552 
+                     3.3-1.23 3.3-1.23.653 1.653.242 
+                     2.873.118 3.176.77.84 1.235 
+                     1.911 1.235 3.221 0 4.609-2.803 
+                     5.628-5.475 5.922.43.372.823 
+                     1.102.823 2.222 0 1.606-.015 
+                     2.896-.015 3.286 0 .319.22.694.825.576C20.565 
+                     22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+    </a>
+</div>
+
+            <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-8 rounded-2xl border border-white border-opacity-20">
+                <h3 class="text-2xl font-bold text-white mb-4">Ready to Transform Your Career?</h3>
+                <p class="text-purple-100 mb-6">Join thousands of professionals who've accelerated their careers with Coderise</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Code<span class="text-purple-400">rise</span></h3>
+                    <p class="text-gray-400">We Build. We Connect. We Rise Together.</p>
+                     <div class="text-sm text-gray-400">
+                        <div>📞 +27 71 756 5048</div>
+                        <div>📧 coderise.crc@gmail.com</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="service.html" class="hover:text-white transition-colors">CV Creation</a></li>
+                        <li><a href="service.html" class="hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="service.html" class="hover:text-white transition-colors">Branding</a></li>
+                        <li><a href="service.html" class="hover:text-white transition-colors">Career Coaching</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+                <div>
+<div>
+    <h4 class="font-semibold mb-4">Connect</h4>
+    <div class="flex space-x-4">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/19TBRAw49L/?mibextid=wwXIfr" 
+   target="_blank" class="text-gray-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 
+                         23.407.593 24 1.325 24h11.495v-9.294H9.691V11.01h3.129V8.413
+                         c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 
+                         2.795.143v3.24h-1.918c-1.505 0-1.797.716-1.797 
+                         1.766v2.316h3.587l-.467 3.696h-3.12V24h6.116C23.407 
+                         24 24 23.407 24 22.674V1.326C24 .593 23.407 
+                         0 22.675 0z"/>
+            </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/your-linkedin-username" 
+   target="_blank" class="text-gray-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037
+                         -1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046
+                         c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 
+                         4.267 5.455v6.286zM5.337 7.433c-1.144 
+                         0-2.063-.926-2.063-2.065 0-1.138.92-2.063 
+                         2.063-2.063 1.14 0 2.064.925 2.064 
+                         2.063 0 1.139-.925 2.065-2.064 2.065zM6.119 
+                         20.452H3.555V9h3.564v11.452zM22.225 
+                         0H1.771C.792 0 0 .774 0 1.729v20.542C0 
+                         23.227.792 24 1.771 24h20.451C23.2 24 24 
+                         23.227 24 22.271V1.729C24 .774 23.2 
+                         0 22.222 0h.003z"/>
+            </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/coderisecrc25?igsh=MTByODU5YzhteGxjYQ%3D%3D&utm_source=qr" 
+   target="_blank" class="text-gray-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 
+                         7.75v8.5A5.75 5.75 0 0 1 16.25 
+                         22h-8.5A5.75 5.75 0 0 1 2 
+                         16.25v-8.5A5.75 5.75 0 0 1 
+                         7.75 2zm0 1.5A4.25 4.25 0 0 
+                         0 3.5 7.75v8.5A4.25 4.25 0 0 
+                         0 7.75 20.5h8.5a4.25 4.25 0 
+                         0 0 4.25-4.25v-8.5A4.25 4.25 
+                         0 0 0 16.25 3.5h-8.5zM12 
+                         7a5 5 0 1 1 0 10 5 5 0 0 
+                         1 0-10zm0 1.5a3.5 3.5 0 1 
+                         0 0 7 3.5 3.5 0 0 0 
+                         0-7zm5.25-.88a1.13 1.13 
+                         0 1 1-2.25 0 1.13 1.13 
+                         0 0 1 2.25 0z"/>
+            </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 .297c-6.63 0-12 
+                         5.373-12 12 0 5.303 3.438 
+                         9.8 8.205 11.385.6.113.82-.258.82-.577
+                         0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+                         -.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729
+                         1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 
+                         2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605
+                         -2.665-.3-5.466-1.334-5.466-5.931 
+                         0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176
+                         0 0 1.008-.322 3.301 1.23a11.5 
+                         11.5 0 0 1 6.003 0c2.292-1.552 
+                         3.3-1.23 3.3-1.23.653 1.653.242 
+                         2.873.118 3.176.77.84 1.235 
+                         1.911 1.235 3.221 0 4.609-2.803 
+                         5.628-5.475 5.922.43.372.823 
+                         1.102.823 2.222 0 1.606-.015 
+                         2.896-.015 3.286 0 .319.22.694.825.576C20.565 
+                         22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+        </a>
+    </div>
+</div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Coderise. All rights reserved. Built with passion by the Coderise team.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Live Chat Widget -->
+  <div class="chat-widget">
+    <button onclick="window.open('https://wa.me/27717565048', '_blank')"
+        class="chat-bubble bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all">
+        <div class="flex items-center space-x-2">
+            <span class="text-2xl">💬</span>
+            <span class="hidden sm:block font-semibold">Chat with us!</span>
+        </div>
+    </button>
+</div>
+
+    <script>
+         // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('span').textContent = '+';
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    button.querySelector('span').textContent = '−';
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('#booking-form').addEventListener('submit', function(e) {
+            // Let the form submit naturally to FormSubmit
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const number = document.getElementById('number').value;
+            const service = document.querySelector('select[name="service"]').value;
+            const message = document.getElementById('message').value;
+            
+            // Basic validation
+            if (!name || !email || !number || !service || !message) {
+                e.preventDefault();
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Validate South African phone number
+            const phonePattern = /^0[6-8][0-9]{8}$/;
+            if (!phonePattern.test(number)) {
+                e.preventDefault();
+                alert('Please enter a valid South African phone number (e.g. 0712345678)');
+                return;
+            }
+            
+            // If validation passes, show confirmation and let form submit
+            alert(`Thank you ${name}! Your message is being sent. We'll contact you within 2 hours regarding ${service}.`);
+        });
+
+        // Contact method buttons
+        document.querySelectorAll('.contact-method button').forEach(button => {
+            button.addEventListener('click', function() {
+                const method = this.textContent.trim();
+                
+                if (method.includes('Call Now')) {
+                    alert('Connecting you to +27 123 456 789...');
+                } else if (method.includes('Message Us')) {
+                    alert('Opening WhatsApp chat...');
+                } else if (method.includes('Send Email')) {
+                    alert('Opening email client...');
+                } else if (method.includes('Schedule Call')) {
+                    alert('Opening booking calendar...');
+                }
+            });
+        });
+
+        // Chat widget
+        document.querySelector('.chat-bubble').addEventListener('click', function() {
+            alert('Live chat opening... Our team is online and ready to help!');
+        });
+
+        // CTA buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const buttonText = this.textContent.trim();
+                
+                if (buttonText.includes('Get Started') || buttonText.includes('Book Free Consultation')) {
+                    e.preventDefault();
+                    alert('Redirecting to booking calendar for your free consultation...');
+                } else if (buttonText.includes('Start Live Chat') || buttonText.includes('Start Chat Now')) {
+                    e.preventDefault();
+                    alert('Live chat opening... Our career specialists are online!');
+                } else if (buttonText.includes('Get Directions')) {
+                    e.preventDefault();
+                    alert('Opening Google Maps directions to our Sandton office...');
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Social media links
+        document.querySelectorAll('.social-icon').forEach(icon => {
+            icon.addEventListener('click', function(e) {
+                e.preventDefault();
+                const emoji = this.textContent.trim();
+                let platform = '';
+                
+                switch(emoji) {
+                    case '📘': platform = 'Facebook'; break;
+                    case '💼': platform = 'LinkedIn'; break;
+                    case '🐦': platform = 'Twitter'; break;
+                    case '📸': platform = 'Instagram'; break;
+                    case '🎥': platform = 'YouTube'; break;
+                }
+                
+                alert(`Opening Coderise ${platform} page...`);
+            });
+        });
+
+        // Simulate online status updates
+        setInterval(() => {
+            document.querySelectorAll('.pulse-dot').forEach(dot => {
+                dot.style.animation = 'pulse 2s infinite';
+            });
+        }, 3000);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98403b0b53c5253d',t:'MTc1ODY5NTQwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
